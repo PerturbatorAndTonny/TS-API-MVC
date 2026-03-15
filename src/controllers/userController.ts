@@ -6,7 +6,9 @@ interface User {
     email: string;
 }
 
-export const getUser = async (req: Request, res: Response) => {
+type getUserFuntion = (req: Request, res: Response) => Promise<Response>;
+
+export const getUser: getUserFuntion = async (req, res) => {
     try {
         const userCollection: User[] = [
             { id: 1, name: 'Jhon Doe', email: 'jane@example.com' },
