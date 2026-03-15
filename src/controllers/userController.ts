@@ -1,19 +1,12 @@
 import type { Request, Response } from 'express';
-
-interface User {
-    id: number;
-    name: string;
-    email: string;
-}
+import { listUsers } from '../model/userModel.ts';
 
 type getUserFuntion = (req: Request, res: Response) => Promise<Response>;
 
 export const getUser: getUserFuntion = async (req, res) => {
     try {
-        const userCollection: User[] = [
-            { id: 1, name: 'Jhon Doe', email: 'jane@example.com' },
-            { id: 2, name: 'John Smith', email: 'john@example.com' }
-        ]
+        const userCollection = listUsers();
+        
         return res.status(200).json({
             message: "Record users",
             data: userCollection
