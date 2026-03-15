@@ -1,6 +1,6 @@
 import app from "./src/app.ts";
 
-const port = process.env.PORT
+const port:Number = Number(process.env.PORT)
 
 async function main() {
   try {
