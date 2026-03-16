@@ -2,3 +2,7 @@ node_modules
 .env
 pnpm-lock.yaml
 pnpm-workspace.yaml
+local.db
+file.db
+drizzle/meta/*
+drizzle/*.sql
