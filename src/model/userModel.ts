@@ -1,15 +1,8 @@
 
-interface User {
-    id: number;
-    name: string;
-    email: string;
-}
+import { type getUserType, userTable } from "../../drizzle/db/schema.ts"
+import { db } from "../../drizzle.config.ts"
 
-const userCollection: User[] = [
-    { id: 1, name: 'Jhon Doe', email: 'jane@example.com' },
-    { id: 2, name: 'John Smith', email: 'john@example.com' }
-]
-
-export function listUsers() {
-    return userCollection;
+export async function listUsers(): Promise<getUserType[]> {
+    const users = await db.select().from(userTable);
+    return users;
 }

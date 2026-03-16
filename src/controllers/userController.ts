@@ -5,8 +5,8 @@ type getUserFuntion = (req: Request, res: Response) => Promise<Response>;
 
 export const getUser: getUserFuntion = async (req, res) => {
     try {
-        const userCollection = listUsers();
-        
+        const userCollection = await listUsers();
+
         return res.status(200).json({
             message: "Record users",
             data: userCollection
