@@ -6,3 +6,4 @@ local.db
 file.db
 drizzle/meta/*
 drizzle/*.sql
+dist/*
