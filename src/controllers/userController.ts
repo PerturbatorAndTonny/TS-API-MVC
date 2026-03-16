@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { listUsers, createUser } from '../model/userModel.ts';
+import { listUsers, createUser } from '../model/userModel.js';
 
 type getUserFuntion = (req: Request, res: Response) => Promise<Response>;
 type createUserFuntion = (req: Request, res: Response) => Promise<Response>;

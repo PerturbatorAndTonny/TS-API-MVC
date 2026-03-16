@@ -1,5 +1,5 @@
 import express, { type Application, type Request, type Response, type NextFunction } from "express"
-import routerUsers from "./routes/userRoutes.ts";
+import routerUsers from "./routes/userRoutes.js";
 import morgan from "morgan";
 
 const app: Application = express();
